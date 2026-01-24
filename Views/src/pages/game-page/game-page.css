@@ -1,0 +1,12 @@
+.home-reroute {
+    margin:1%;
+    justify-content: start;
+    height: 1vh;
+    width: 2vh;
+}
+
+.icon {
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}

@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    height: 20vh;
+    color:white;
+    padding:2%;
+}
+
+.content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#game-description {
+    height: 1%;
+}
+
+#play-button {
+    height: 5vh;
+}

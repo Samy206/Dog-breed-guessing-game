@@ -1,0 +1,20 @@
+<div class="home-reroute">
+    <a routerLink="/">
+        <nz-icon nzType="home" nzTheme="fill" class="icon"/>
+    </a>
+</div>
+
+@if(this.getDog() != undefined){
+    <div class="game">
+        <img [src]='this.currentDog.pictureURL'>
+    </div>
+}
+@else {
+    <div class="game">
+        Loading dog
+    </div>
+}
+
+
+
+
