@@ -1,19 +1,48 @@
-<div class="home-reroute">
-    <a routerLink="/">
-        <nz-icon nzType="home" nzTheme="fill" class="icon"/>
-    </a>
+<div class="container">
+
+    <div class="home-reroute">
+        <a routerLink="/">
+            <nz-icon nzType="home" nzTheme="fill" class="icon"/>
+        </a>
+    </div>
+
+    @if(this.currentDog != undefined && this.currentIndex < this.PARTY_LENGTH){
+        <div class="game">
+            <img class="image" [src]='this.currentDog.pictureURL'>
+            <input 
+                name='breed-guess' 
+                nz-input 
+                id='breed-guess' 
+                placeholder="Dog breed"
+                (keydown.enter)="saveAnswer()"/>
+
+            <button 
+                nz-button 
+                nzType="primary" 
+                id="play-button" 
+                (click)="saveAnswer()">
+                Select
+            </button>
+        </div>
+    }
+    @else {
+
+        @if(this.currentIndex == 0) {
+            <div class="game">
+                Loading dog
+            </div>
+        } 
+        @else {
+            <p>
+                Score to be displayed
+            </p>
+        }  
+
+        
+    }
+
 </div>
 
-@if(this.getDog() != undefined){
-    <div class="game">
-        <img [src]='this.currentDog.pictureURL'>
-    </div>
-}
-@else {
-    <div class="game">
-        Loading dog
-    </div>
-}
 
 
 
